@@ -1,0 +1,20 @@
+# 这是 VPS 部署专用的配置示例
+# 请将其重命名为 bot_config.toml 并替换 VPS 上 config 目录下的原有配置文件
+# 这个文件放在根目录是为了避免被 Git 忽略，方便你查看
+
+[maim_message]
+# ⚠️⚠️⚠️ 警告 ⚠️⚠️⚠️
+# 如果您将代码上传到 GitHub，请务必将仓库设为【Private (私有)】！
+# 如果仓库是 Public (公开) 的，任何人都能看到您的 Token，这非常危险！
+# 
+# ⚠️ 重要: 在 Docker 中必须监听 0.0.0.0，否则外部容器(Koishi)无法连接
+host = "0.0.0.0"
+port = 8090
+mode = "ws"
+use_wss = false
+
+# ⚠️ 强烈建议设置一个 Token 以保证安全，Koishi 连接时需要填入相同的 Token
+auth_token = ["YourSecretTokenHere"] 
+
+# ... 其他配置项请参考 config/bot_config.toml 或 template/bot_config_template.toml ...
+# ... 你需要复制完整的配置文件内容到这里，并修改上述几项 ...
